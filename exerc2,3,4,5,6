@@ -1,0 +1,65 @@
+2. Respostas sobre alocação dinâmica de memória
+a) Comportamento da função free:
+Libera a memória alocada dinamicamente, tornando-a disponível para reutilização pelo sistema.
+
+b) Uso do ponteiro após free:
+Não deve ser utilizado, pois o ponteiro estará "pendente" e pode causar comportamento indefinido. O ideal é defini-lo como NULL após o free.
+
+c) Causa de vazamentos de memória:
+Ocorrência quando a memória alocada dinamicamente não é liberada com free, resultando em uso excessivo de recursos.
+
+d) Retorno de malloc quando falha:
+Retorna NULL.
+
+e) Explicação da instrução calloc:
+Aloca memória inicializada com zero. Recebe dois argumentos: o número de elementos e o tamanho de cada elemento.
+
+f) Diferença entre malloc e calloc:
+
+malloc apenas aloca memória sem inicializar.
+calloc aloca e inicializa a memória com zeros.
+3. Modos de abertura de arquivos e funções
+a) Modos de abertura:
+
+"r": Leitura.
+"w": Escrita (sobrescreve se existir).
+"a": Adiciona no final.
+"r+": Leitura e escrita.
+"w+": Leitura e escrita (sobrescreve).
+"a+": Leitura e escrita (adiciona ao final).
+b) Explicação das funções:
+
+fgets: Lê uma linha de um arquivo.
+fprintf: Escreve no arquivo com formatação.
+fread: Lê dados binários.
+fwrite: Escreve dados binários.
+4. Saída do código
+Entrada exemplo: 10 5
+Cálculo:
+
+a > b é falso.
+!(a > 0) é falso.
+Portanto, c = a / b = 10 / 5 = 2.0.
+Saída:
+2.00
+
+5. Análise do código
+Após cada linha:
+
+a * b / c = 0.667
+a * b % c + 1 = 3
+++a * b - c-- = 8
+7 - - b * ++d = 27
+a / b / c = 0.167
+7 + c * --d / e = 7.600
+2 * a % - b + c + 1 = 6
+39 / - ++e - + 29 % c = -14.000
+7 - + ++a % (3+b) = 7
+6. Valor de w
+Cálculo:
+
+Inicialmente: w = 5 + 11 = 16.
+Como y não é maior que z, não entra no if.
+Resultado:
+16
+
