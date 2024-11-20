@@ -1,0 +1,25 @@
+#include <stdio.h> // Biblioteca padrão para entrada e saída
+
+int main() {
+    float nota;       // Variável para armazenar a nota do aluno
+    float frequencia; // Variável para armazenar a frequência do aluno em porcentagem
+
+    // Solicita ao usuário a nota do aluno e a armazena na variável `nota`
+    printf("Digite a nota do aluno: ");
+    scanf("%f", &nota);
+
+    // Solicita ao usuário a frequência do aluno e a armazena na variável `frequencia`
+    printf("Digite a frequencia do aluno (em porcentagem): ");
+    scanf("%f", &frequencia);
+
+    // Verifica se o aluno atende aos critérios de aprovação
+    if (nota >= 7.0 && frequencia >= 75.0) { 
+        // Se a nota for maior ou igual a 7 e a frequência for maior ou igual a 75%
+        printf("Aluno aprovado!\n"); // Informa que o aluno foi aprovado
+    } else { 
+        // Caso contrário, o aluno é reprovado
+        printf("Aluno reprovado.\n"); // Informa que o aluno foi reprovado
+    }
+
+    return 0; // Retorna 0 para indicar que o programa terminou com sucesso
+}
