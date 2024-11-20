@@ -1,0 +1,4 @@
+Um vetor é uma estrutura de dados que armazena elementos sequenciais do mesmo tipo. Em C, vetores são tratados como ponteiros para o primeiro elemento e têm comportamento semelhante a listas. Os elementos são acessados via índice, com o primeiro elemento no índice 0. Por exemplo:
+
+int vetor[5] = {1, 2, 3, 4, 5};
+printf("%d", vetor[0]); // Imprime 1
