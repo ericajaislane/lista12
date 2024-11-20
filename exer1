@@ -1,0 +1,49 @@
+#include <stdio.h>  // Biblioteca padrão para entrada e saída
+#include <stdlib.h> // Biblioteca padrão para alocação de memória
+#include <string.h> // Biblioteca para manipulação de strings (não usada diretamente aqui, mas útil em outros contextos)
+
+// Declaração de uma estrutura para representar um aluno
+typedef struct Aluno {
+    char nome[100];   // Nome do aluno (máximo de 100 caracteres)
+    int faltas;       // Número de faltas do aluno
+    float nota;       // Nota final do aluno
+} aluno_t;            // Nome alternativo para simplificar o uso da estrutura
+
+int main() {
+    // Aloca memória dinamicamente para um aluno
+    aluno_t *novo_aluno = (aluno_t *)malloc(sizeof(aluno_t));
+
+    // Verifica se a alocação de memória foi bem-sucedida
+    if (novo_aluno == NULL) { 
+        printf("Erro ao alocar memória.\n"); // Exibe mensagem de erro
+        return 1; // Encerra o programa com erro
+    }
+
+    // Solicita e lê o nome do aluno (lê uma linha inteira com espaços)
+    printf("Digite o nome do aluno: ");
+    scanf(" %[^\n]", novo_aluno->nome);
+
+    // Solicita e lê o número de faltas
+    printf("Digite o numero de faltas: ");
+    scanf("%d", &novo_aluno->faltas);
+
+    // Solicita e lê a nota do aluno
+    printf("Digite a nota do aluno: ");
+    scanf("%f", &novo_aluno->nota);
+
+    // Exibe os dados do aluno na tela
+    printf("\nAluno: %s\nFaltas: %d\nNota: %.2f\n", novo_aluno->nome, novo_aluno->faltas, novo_aluno->nota);
+
+    // Verifica o status do aluno com base na nota
+    if (novo_aluno->nota >= 7.0) // Se a nota for maior ou igual a 7, está aprovado
+        printf("Status: Aprovado\n");
+    else // Caso contrário, está reprovado
+        printf("Status: Reprovado\n");
+
+    // Libera a memória alocada dinamicamente para evitar vazamentos
+    free(novo_aluno);
+
+    // Retorna 0 para indicar que o programa terminou com sucesso
+    return 0;
+}
+
